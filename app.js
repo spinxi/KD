@@ -2,36 +2,50 @@ const universityDatabase = {
   student: {
     name: "Kalina",
     studentId: "ST-2026-0418",
-    faculty: "Wydzia\u0142 Nauk Spo\u0142ecznych"
+    faculty: "Wydział Nauk Społecznych"
   },
   modules: [
-    { name: "Psychologia i technologia", lecturer: "Przedmiot uniwersytecki", hours: 18, ects: 4, grade: 4.5 },
-    { name: "Aktualne debaty o technologii", lecturer: "Przedmiot uniwersytecki", hours: 15, ects: 5, grade: 5.0 },
-    { name: "Umiej\u0119tno\u015bci akademickie", lecturer: "Przedmiot uniwersytecki", hours: 16, ects: 4, grade: 4.5 },
-    { name: "Wprowadzenie do informatyki", lecturer: "Przedmiot uniwersytecki", hours: 20, ects: 5, grade: 5.0 },
-    { name: "Wprowadzenie do psychologii spo\u0142ecznej", lecturer: "Przedmiot uniwersytecki", hours: 20, ects: 5, grade: 5.0 },
-    { name: "Wprowadzenie do psychologii", lecturer: "Przedmiot uniwersytecki", hours: 18, ects: 4, grade: 4.5 },
-    { name: "J\u0119zyki programowania", lecturer: "Przedmiot uniwersytecki", hours: 22, ects: 5, grade: 5.0 },
-    { name: "Matematyka 1", lecturer: "Przedmiot uniwersytecki", hours: 20, ects: 5, grade: 5.0 }
+    // Semestr 1
+    { semester: 1, name: "Psychologia i technologia", lecturer: "Przedmiot uniwersytecki", hours: 18, ects: 4, grade: 4.5 },
+    { semester: 1, name: "Aktualne debaty o technologii", lecturer: "Przedmiot uniwersytecki", hours: 15, ects: 5, grade: 5.0 },
+    { semester: 1, name: "Umiejętności akademickie", lecturer: "Przedmiot uniwersytecki", hours: 16, ects: 4, grade: 4.5 },
+    { semester: 1, name: "Wprowadzenie do informatyki", lecturer: "Przedmiot uniwersytecki", hours: 20, ects: 5, grade: 5.0 },
+    { semester: 1, name: "Wprowadzenie do psychologii społecznej", lecturer: "Przedmiot uniwersytecki", hours: 20, ects: 5, grade: 5.0 },
+    { semester: 1, name: "Wprowadzenie do psychologii", lecturer: "Przedmiot uniwersytecki", hours: 18, ects: 4, grade: 4.5 },
+    { semester: 1, name: "Języki programowania", lecturer: "Przedmiot uniwersytecki", hours: 22, ects: 5, grade: 5.0 },
+    { semester: 1, name: "Matematyka 1", lecturer: "Przedmiot uniwersytecki", hours: 20, ects: 5, grade: 5.0 },
+    
+    // Semestr 2 (Zaktualizowane dane)
+    { semester: 2, name: "Metodologia badań psychologicznych (wykład)", lecturer: "Przedmiot uniwersytecki", hours: 15, ects: 3, grade: 4.0 },
+    { semester: 2, name: "Metodologia badań psychologicznych (ćwiczenia)", lecturer: "Przedmiot uniwersytecki", hours: 15, ects: 3, grade: 4.0 },
+    { semester: 2, name: "Psychologia społeczna: praktyczne zastosowania (ćwiczenia)", lecturer: "Przedmiot uniwersytecki", hours: 20, ects: 4, grade: 4.0 },
+    { semester: 2, name: "Podstawowe umiejętności psychologiczne (ćwiczenia)", lecturer: "Przedmiot uniwersytecki", hours: 16, ects: 3, grade: 3.5 },
+    { semester: 2, name: "Matematyka 2", lecturer: "Przedmiot uniwersytecki", hours: 30, ects: 5, grade: 4.0 },
+    { semester: 2, name: "Bazy danych (wykład)", lecturer: "Przedmiot uniwersytecki", hours: 15, ects: 2, grade: 4.0 },
+    { semester: 2, name: "Bazy danych (ćwiczenia)", lecturer: "Przedmiot uniwersytecki", hours: 15, ects: 3, grade: 4.0 },
+    { semester: 2, name: "Chmury obliczeniowe (wykład)", lecturer: "Przedmiot uniwersytecki", hours: 15, ects: 2, grade: 4.0 },
+    { semester: 2, name: "Chmury obliczeniowe (ćwiczenia)", lecturer: "Przedmiot uniwersytecki", hours: 15, ects: 3, grade: 4.0 },
+    { semester: 2, name: "Aktualne debaty o technologii 2 (wykład)", lecturer: "Przedmiot uniwersytecki", hours: 15, ects: 3, grade: 4.0 },
+    { semester: 2, name: "Język angielski (ćwiczenia)", lecturer: "Lektorat", hours: 30, ects: 2, grade: 5.0 }
   ],
   upcomingClasses: [
     {
       dayName: "SOB",
-      dayNumber: "11",
-      month: "KWI",
-      title: "Metodologia bada\u0144 psychologicznych",
-      lecturer: "dr Maksymilian Bielecki",
-      details: "Wyk\u0142ad | Grupa 1 | Sala Online",
+      dayNumber: "17",
+      month: "PAŹ",
+      title: "Statystyka 1",
+      lecturer: "dr Jan Kowalski",
+      details: "Wykład | Grupa 1 | Sala Online",
       time: "08:15 - 10:35",
       link: "Classroom"
     },
     {
       dayName: "SOB",
-      dayNumber: "11",
-      month: "KWI",
-      title: "Matematyka 2",
-      lecturer: "dr Katarzyna Winkowska-Nowak",
-      details: "Wyk\u0142ad | Grupa 1 | Sala Online",
+      dayNumber: "17",
+      month: "PAŹ",
+      title: "Psychologia poznawcza",
+      lecturer: "dr Anna Nowak",
+      details: "Wykład | Grupa 1 | Sala Online",
       time: "10:50 - 13:10",
       link: "Classroom"
     }
@@ -39,19 +53,19 @@ const universityDatabase = {
   schedule: [
     {
       dayName: "PON",
-      dayNumber: "13",
-      month: "KWI",
-      title: "Wprowadzenie do psychologii",
-      lecturer: "dr Monika D\u0105browska",
-      details: "\u0106wiczenia | Grupa 2 | Sala B-204",
+      dayNumber: "19",
+      month: "PAŹ",
+      title: "Projektowanie UX/UI",
+      lecturer: "mgr Tomasz Wiśniewski",
+      details: "Laboratorium | Grupa 2 | Sala B-204",
       time: "09:00 - 10:30",
-      link: "Szczeg\u00f3\u0142y"
+      link: "Szczegóły"
     },
     {
       dayName: "WT",
-      dayNumber: "14",
-      month: "KWI",
-      title: "J\u0119zyki programowania",
+      dayNumber: "20",
+      month: "PAŹ",
+      title: "Bazy danych",
       lecturer: "mgr Adam Wysocki",
       details: "Laboratorium | Grupa 1 | Sala Online",
       time: "12:15 - 14:00",
@@ -61,28 +75,28 @@ const universityDatabase = {
   messages: [
     {
       from: "Uniwersytet SWPS",
-      date: "03.04.2026 | 08:30",
-      subject: "Zaj\u0119cia zmienione"
+      date: "15.10.2026 | 08:30",
+      subject: "Witamy w Semestrze 2!"
     },
     {
-      from: "Wydzia\u0142 Projektowania w Warszawie",
-      date: "26.03.2026 | 12:20",
-      subject: "Zaproszenie / Invitation (Erasmus + BIP): Szko\u0142a letnia \"Education Futures\" / Summer School \"Education Futures\""
-    },
-    {
-      from: "Uniwersytet SWPS",
-      date: "11.03.2026 | 10:55",
-      subject: "Zaj\u0119cia zmienione"
+      from: "Dział Stypendialny",
+      date: "12.10.2026 | 12:20",
+      subject: "Wnioski o stypendium rektora 2026/2027"
     },
     {
       from: "Uniwersytet SWPS",
-      date: "06.03.2026 | 08:15",
-      subject: "Zaj\u0119cia zmienione"
+      date: "10.10.2026 | 10:55",
+      subject: "Zajęcia zmienione - Statystyka 1"
+    },
+    {
+      from: "Centrum Spraw Studenckich",
+      date: "05.10.2026 | 08:15",
+      subject: "Ważne informacje na start semestru"
     },
     {
       from: "Uniwersytet SWPS",
-      date: "23.02.2026 | 12:35",
-      subject: "Informacja o organizacji zaj\u0119\u0107"
+      date: "28.09.2026 | 12:35",
+      subject: "Informacja o organizacji zajęć w semestrze zimowym"
     }
   ],
   menuGroups: [
@@ -94,19 +108,19 @@ const universityDatabase = {
       ]
     },
     {
-      title: "Sprawy bie\u017c\u0105ce",
+      title: "Sprawy bieżące",
       items: [
         { icon: "newsletter", label: "Najnowszy numer newslettera PowiadamiaMY" },
-        { icon: "team", label: "Poznaj zesp\u00f3\u0142 Centrum Spraw Studenckich" }
+        { icon: "team", label: "Poznaj zespół Centrum Spraw Studenckich" }
       ]
     },
     {
-      title: "Przejd\u017a na Wirtualn\u0105 Uczelni\u0119",
+      title: "Przejdź na Wirtualną Uczelnię",
       items: [
         { icon: "question", label: "Zadaj pytanie" },
-        { icon: "card", label: "Op\u0142aty" },
-        { icon: "form", label: "Z\u0142\u00f3\u017c podanie" },
-        { icon: "document", label: "Za\u015bwiadczenia" }
+        { icon: "card", label: "Opłaty" },
+        { icon: "form", label: "Złóż podanie" },
+        { icon: "document", label: "Zaświadczenia" }
       ]
     }
   ]
@@ -116,6 +130,7 @@ const screenContent = document.getElementById("screenContent");
 const navItems = Array.from(document.querySelectorAll(".nav-item"));
 
 let currentScreen = "grades";
+let currentSemesterFilter = 2; // Domyślnie otwieramy nowy semestr
 
 function formatNumber(value) {
   return value.toFixed(1).replace(".", ",");
@@ -175,15 +190,15 @@ function renderHomeScreen() {
     <header class="topbar home-greeting">
       <div>
         <p class="eyebrow">Panel studenta</p>
-        <h1>Cze\u015b\u0107, ${universityDatabase.student.name}</h1>
+        <h1>Cześć, ${universityDatabase.student.name}</h1>
       </div>
     </header>
 
     <section class="banner-card">
       <div class="banner-mark"></div>
       <div class="banner-text">
-        <h3>B\u0105d\u017amyMY bezpieczni</h3>
-        <p>Sprawd\u017a materia\u0142y w Bazie Wiedzy</p>
+        <h3>BądźmyMY bezpieczni</h3>
+        <p>Sprawdź materiały w Bazie Wiedzy</p>
       </div>
     </section>
 
@@ -195,8 +210,8 @@ function renderHomeScreen() {
     </div>
 
     <section class="section-head">
-      <h2>Najbli\u017csze zaj\u0119cia</h2>
-      <a class="section-link" href="#">Kolejne zaj\u0119cia</a>
+      <h2>Najbliższe zajęcia</h2>
+      <a class="section-link" href="#">Kolejne zajęcia</a>
     </section>
 
     <section class="stack">${classesMarkup}</section>
@@ -232,15 +247,15 @@ function renderScheduleScreen() {
   screenContent.innerHTML = `
     <header class="topbar">
       <div>
-        <p class="eyebrow">Tw\u00f3j kalendarz</p>
-        <h1>Plan zaj\u0119\u0107</h1>
+        <p class="eyebrow">Twój kalendarz</p>
+        <h1>Plan zajęć</h1>
       </div>
     </header>
 
     <section class="stack">
       ${scheduleMarkup}
       <div class="schedule-card schedule-placeholder">
-        Widok planu jest przyk\u0142adowy. Mo\u017cemy doda\u0107 pe\u0142ny tygodniowy harmonogram, je\u015bli chcesz.
+        Widok planu jest przykładowy. Możemy dodać pełny tygodniowy harmonogram, jeśli chcesz.
       </div>
     </section>
   `;
@@ -248,15 +263,18 @@ function renderScheduleScreen() {
 
 function renderGradesScreen() {
   const { modules, student } = universityDatabase;
-  const { totalEcts, averageGrade } = getAverageGrade(modules);
+  
+  // Filtrowanie modułów tylko dla wybranego semestru
+  const filteredModules = modules.filter(m => m.semester === currentSemesterFilter);
+  const { totalEcts, averageGrade } = getAverageGrade(filteredModules);
 
-  const gradesMarkup = modules
+  const gradesMarkup = filteredModules
     .map(
       (module) => `
         <article class="grade-card">
           <div class="grade-card-head">
             <div>
-              <p class="grade-meta">Modu\u0142</p>
+              <p class="grade-meta">Moduł</p>
               <h3 class="grade-card-title">${module.name}</h3>
               <p class="lecturer">${module.lecturer}</p>
             </div>
@@ -281,13 +299,18 @@ function renderGradesScreen() {
       </div>
     </header>
 
+    <div class="tabs">
+      <button class="${currentSemesterFilter === 1 ? 'active' : ''}" data-semester="1" type="button">Semestr 1</button>
+      <button class="${currentSemesterFilter === 2 ? 'active' : ''}" data-semester="2" type="button">Semestr 2</button>
+    </div>
+
     <section class="summary-card">
       <article>
         <span class="summary-label">Zebrane punkty ECTS</span>
         <strong>${formatNumber(totalEcts)} / ${formatNumber(totalEcts)}</strong>
       </article>
       <article>
-        <span class="summary-label">\u015arednia ocen</span>
+        <span class="summary-label">Średnia ocen</span>
         <strong>${averageGrade.toFixed(2).replace(".", ",")}</strong>
       </article>
     </section>
@@ -305,6 +328,15 @@ function renderGradesScreen() {
 
     <section class="stack">${gradesMarkup}</section>
   `;
+
+  // Obsługa przełączania semestrów
+  const tabButtons = screenContent.querySelectorAll('.tabs button[data-semester]');
+  tabButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+      currentSemesterFilter = parseInt(e.target.dataset.semester);
+      renderGradesScreen();
+    });
+  });
 }
 
 function renderMessagesScreen() {
@@ -326,13 +358,13 @@ function renderMessagesScreen() {
     <header class="topbar">
       <div>
         <p class="eyebrow">Komunikacja</p>
-        <h1>Wiadomo\u015bci</h1>
+        <h1>Wiadomości</h1>
       </div>
     </header>
 
     <div class="tabs">
       <button class="active" type="button">Z uczelni</button>
-      <button type="button">Zmiany w planie zaj\u0119\u0107</button>
+      <button type="button">Zmiany w planie zajęć</button>
       <button type="button">Nowe</button>
     </div>
 
@@ -369,7 +401,7 @@ function renderMoreScreen() {
   screenContent.innerHTML = `
     <header class="topbar">
       <div>
-        <p class="eyebrow">Skr\u00f3ty i narz\u0119dzia</p>
+        <p class="eyebrow">Skróty i narzędzia</p>
         <h1>Menu</h1>
       </div>
     </header>
