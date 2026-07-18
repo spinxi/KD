@@ -5,7 +5,7 @@ const universityDatabase = {
     faculty: "Wydział Nauk Społecznych"
   },
   modules: [
-    // Twoje oryginalne dane z Semestru 1
+    // Semester 1 Data
     { semester: 1, name: "Psychologia i technologia", lecturer: "Przedmiot uniwersytecki", hours: 18, ects: 4, grade: 4.5 },
     { semester: 1, name: "Aktualne debaty o technologii", lecturer: "Przedmiot uniwersytecki", hours: 15, ects: 5, grade: 5.0 },
     { semester: 1, name: "Umiejętności akademickie", lecturer: "Przedmiot uniwersytecki", hours: 16, ects: 4, grade: 4.5 },
@@ -15,7 +15,7 @@ const universityDatabase = {
     { semester: 1, name: "Języki programowania", lecturer: "Przedmiot uniwersytecki", hours: 22, ects: 5, grade: 5.0 },
     { semester: 1, name: "Matematyka 1", lecturer: "Przedmiot uniwersytecki", hours: 20, ects: 5, grade: 5.0 },
     
-    // Nowe dane z Semestru 2
+    // Semester 2 Data
     { semester: 2, name: "Metodologia badań psychologicznych (wykład)", lecturer: "Przedmiot uniwersytecki", hours: 15, ects: 3, grade: 4.0 },
     { semester: 2, name: "Metodologia badań psychologicznych (ćwiczenia)", lecturer: "Przedmiot uniwersytecki", hours: 15, ects: 3, grade: 4.0 },
     { semester: 2, name: "Psychologia społeczna: praktyczne zastosowania (ćwiczenia)", lecturer: "Przedmiot uniwersytecki", hours: 20, ects: 4, grade: 4.0 },
@@ -29,7 +29,7 @@ const universityDatabase = {
     { semester: 2, name: "Język angielski (ćwiczenia)", lecturer: "Lektorat", hours: 30, ects: 2, grade: 5.0 }
   ],
   upcomingClasses: [
-    // Nowe, odświeżone zajęcia
+    // Refreshed upcoming classes
     {
       dayName: "SOB",
       dayNumber: "25",
@@ -40,7 +40,7 @@ const universityDatabase = {
       time: "08:15 - 10:35",
       link: "Classroom"
     },
-    // Twoje stare zajęcia zachowane poniżej
+    // Old preserved classes
     {
       dayName: "SOB",
       dayNumber: "11",
@@ -63,7 +63,7 @@ const universityDatabase = {
     }
   ],
   schedule: [
-    // Nowe zajęcia
+    // Refreshed schedule classes
     {
       dayName: "PON",
       dayNumber: "20",
@@ -74,7 +74,7 @@ const universityDatabase = {
       time: "09:00 - 10:30",
       link: "Szczegóły"
     },
-    // Twoje oryginalne wpisy
+    // Old preserved schedule classes
     {
       dayName: "PON",
       dayNumber: "13",
@@ -97,13 +97,13 @@ const universityDatabase = {
     }
   ],
   messages: [
-    // Nowa wiadomość na szczycie
+    // New refreshed message
     {
       from: "Uniwersytet SWPS",
       date: "18.07.2026 | 09:00",
       subject: "Witamy w Semestrze 2!"
     },
-    // Twoje oryginalne wiadomości
+    // Old preserved messages
     {
       from: "Uniwersytet SWPS",
       date: "03.04.2026 | 08:30",
@@ -161,7 +161,7 @@ const screenContent = document.getElementById("screenContent");
 const navItems = Array.from(document.querySelectorAll(".nav-item"));
 
 let currentScreen = "grades";
-let currentSemesterFilter = 2; // Domyślny widok to Semestr 2
+let currentSemesterFilter = 2; // Default to Semester 2
 
 function formatNumber(value) {
   return value.toFixed(1).replace(".", ",");
@@ -295,7 +295,7 @@ function renderScheduleScreen() {
 function renderGradesScreen() {
   const { modules, student } = universityDatabase;
   
-  // Filtrowanie modułów według wybranego semestru
+  // Filter modules based on the selected semester
   const filteredModules = modules.filter(m => m.semester === currentSemesterFilter);
   const { totalEcts, averageGrade } = getAverageGrade(filteredModules);
 
@@ -322,6 +322,7 @@ function renderGradesScreen() {
     )
     .join("");
 
+  // This block contains the <div class="tabs"> which creates the switch
   screenContent.innerHTML = `
     <header class="topbar">
       <div>
@@ -360,12 +361,12 @@ function renderGradesScreen() {
     <section class="stack">${gradesMarkup}</section>
   `;
 
-  // Podpinanie logiki zmiany semestru
+  // Attach event listeners to make the tabs functional
   const tabButtons = screenContent.querySelectorAll('.tabs button[data-semester]');
   tabButtons.forEach(button => {
     button.addEventListener('click', (e) => {
       currentSemesterFilter = parseInt(e.target.dataset.semester);
-      renderGradesScreen();
+      renderGradesScreen(); // Re-render the screen when clicked
     });
   });
 }
@@ -466,4 +467,5 @@ navItems.forEach((item) => {
   });
 });
 
+// Initialize app on the grades screen
 renderScreen(currentScreen);
