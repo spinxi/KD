@@ -5,7 +5,7 @@ const universityDatabase = {
     faculty: "Wydział Nauk Społecznych"
   },
   modules: [
-    // Semestr 1
+    // Twoje oryginalne dane z Semestru 1
     { semester: 1, name: "Psychologia i technologia", lecturer: "Przedmiot uniwersytecki", hours: 18, ects: 4, grade: 4.5 },
     { semester: 1, name: "Aktualne debaty o technologii", lecturer: "Przedmiot uniwersytecki", hours: 15, ects: 5, grade: 5.0 },
     { semester: 1, name: "Umiejętności akademickie", lecturer: "Przedmiot uniwersytecki", hours: 16, ects: 4, grade: 4.5 },
@@ -15,7 +15,7 @@ const universityDatabase = {
     { semester: 1, name: "Języki programowania", lecturer: "Przedmiot uniwersytecki", hours: 22, ects: 5, grade: 5.0 },
     { semester: 1, name: "Matematyka 1", lecturer: "Przedmiot uniwersytecki", hours: 20, ects: 5, grade: 5.0 },
     
-    // Semestr 2 (Zaktualizowane dane)
+    // Nowe dane z Semestru 2
     { semester: 2, name: "Metodologia badań psychologicznych (wykład)", lecturer: "Przedmiot uniwersytecki", hours: 15, ects: 3, grade: 4.0 },
     { semester: 2, name: "Metodologia badań psychologicznych (ćwiczenia)", lecturer: "Przedmiot uniwersytecki", hours: 15, ects: 3, grade: 4.0 },
     { semester: 2, name: "Psychologia społeczna: praktyczne zastosowania (ćwiczenia)", lecturer: "Przedmiot uniwersytecki", hours: 20, ects: 4, grade: 4.0 },
@@ -29,43 +29,67 @@ const universityDatabase = {
     { semester: 2, name: "Język angielski (ćwiczenia)", lecturer: "Lektorat", hours: 30, ects: 2, grade: 5.0 }
   ],
   upcomingClasses: [
+    // Nowe, odświeżone zajęcia
     {
       dayName: "SOB",
-      dayNumber: "17",
-      month: "PAŹ",
-      title: "Statystyka 1",
-      lecturer: "dr Jan Kowalski",
+      dayNumber: "25",
+      month: "LIP",
+      title: "Bazy danych",
+      lecturer: "mgr Adam Wysocki",
+      details: "Wykład | Grupa 1 | Sala Online",
+      time: "08:15 - 10:35",
+      link: "Classroom"
+    },
+    // Twoje stare zajęcia zachowane poniżej
+    {
+      dayName: "SOB",
+      dayNumber: "11",
+      month: "KWI",
+      title: "Metodologia badań psychologicznych",
+      lecturer: "dr Maksymilian Bielecki",
       details: "Wykład | Grupa 1 | Sala Online",
       time: "08:15 - 10:35",
       link: "Classroom"
     },
     {
       dayName: "SOB",
-      dayNumber: "17",
-      month: "PAŹ",
-      title: "Psychologia poznawcza",
-      lecturer: "dr Anna Nowak",
+      dayNumber: "11",
+      month: "KWI",
+      title: "Matematyka 2",
+      lecturer: "dr Katarzyna Winkowska-Nowak",
       details: "Wykład | Grupa 1 | Sala Online",
       time: "10:50 - 13:10",
       link: "Classroom"
     }
   ],
   schedule: [
+    // Nowe zajęcia
     {
       dayName: "PON",
-      dayNumber: "19",
-      month: "PAŹ",
-      title: "Projektowanie UX/UI",
-      lecturer: "mgr Tomasz Wiśniewski",
+      dayNumber: "20",
+      month: "LIP",
+      title: "Chmury obliczeniowe",
+      lecturer: "dr Jan Kowalski",
       details: "Laboratorium | Grupa 2 | Sala B-204",
+      time: "09:00 - 10:30",
+      link: "Szczegóły"
+    },
+    // Twoje oryginalne wpisy
+    {
+      dayName: "PON",
+      dayNumber: "13",
+      month: "KWI",
+      title: "Wprowadzenie do psychologii",
+      lecturer: "dr Monika Dąbrowska",
+      details: "Ćwiczenia | Grupa 2 | Sala B-204",
       time: "09:00 - 10:30",
       link: "Szczegóły"
     },
     {
       dayName: "WT",
-      dayNumber: "20",
-      month: "PAŹ",
-      title: "Bazy danych",
+      dayNumber: "14",
+      month: "KWI",
+      title: "Języki programowania",
       lecturer: "mgr Adam Wysocki",
       details: "Laboratorium | Grupa 1 | Sala Online",
       time: "12:15 - 14:00",
@@ -73,30 +97,37 @@ const universityDatabase = {
     }
   ],
   messages: [
+    // Nowa wiadomość na szczycie
     {
       from: "Uniwersytet SWPS",
-      date: "15.10.2026 | 08:30",
+      date: "18.07.2026 | 09:00",
       subject: "Witamy w Semestrze 2!"
     },
+    // Twoje oryginalne wiadomości
     {
-      from: "Dział Stypendialny",
-      date: "12.10.2026 | 12:20",
-      subject: "Wnioski o stypendium rektora 2026/2027"
+      from: "Uniwersytet SWPS",
+      date: "03.04.2026 | 08:30",
+      subject: "Zajęcia zmienione"
+    },
+    {
+      from: "Wydział Projektowania w Warszawie",
+      date: "26.03.2026 | 12:20",
+      subject: "Zaproszenie / Invitation (Erasmus + BIP): Szkoła letnia \"Education Futures\" / Summer School \"Education Futures\""
     },
     {
       from: "Uniwersytet SWPS",
-      date: "10.10.2026 | 10:55",
-      subject: "Zajęcia zmienione - Statystyka 1"
-    },
-    {
-      from: "Centrum Spraw Studenckich",
-      date: "05.10.2026 | 08:15",
-      subject: "Ważne informacje na start semestru"
+      date: "11.03.2026 | 10:55",
+      subject: "Zajęcia zmienione"
     },
     {
       from: "Uniwersytet SWPS",
-      date: "28.09.2026 | 12:35",
-      subject: "Informacja o organizacji zajęć w semestrze zimowym"
+      date: "06.03.2026 | 08:15",
+      subject: "Zajęcia zmienione"
+    },
+    {
+      from: "Uniwersytet SWPS",
+      date: "23.02.2026 | 12:35",
+      subject: "Informacja o organizacji zajęć"
     }
   ],
   menuGroups: [
@@ -130,7 +161,7 @@ const screenContent = document.getElementById("screenContent");
 const navItems = Array.from(document.querySelectorAll(".nav-item"));
 
 let currentScreen = "grades";
-let currentSemesterFilter = 2; // Domyślnie otwieramy nowy semestr
+let currentSemesterFilter = 2; // Domyślny widok to Semestr 2
 
 function formatNumber(value) {
   return value.toFixed(1).replace(".", ",");
@@ -264,7 +295,7 @@ function renderScheduleScreen() {
 function renderGradesScreen() {
   const { modules, student } = universityDatabase;
   
-  // Filtrowanie modułów tylko dla wybranego semestru
+  // Filtrowanie modułów według wybranego semestru
   const filteredModules = modules.filter(m => m.semester === currentSemesterFilter);
   const { totalEcts, averageGrade } = getAverageGrade(filteredModules);
 
@@ -329,7 +360,7 @@ function renderGradesScreen() {
     <section class="stack">${gradesMarkup}</section>
   `;
 
-  // Obsługa przełączania semestrów
+  // Podpinanie logiki zmiany semestru
   const tabButtons = screenContent.querySelectorAll('.tabs button[data-semester]');
   tabButtons.forEach(button => {
     button.addEventListener('click', (e) => {
